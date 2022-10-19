@@ -30,9 +30,13 @@ public:
 
 private:
 // Private Member functions here
-size_t size;
-value data [NDIM];
+    size_t size;
+    value data[NDIM];
 // Member variables are ALWAYS private, and they go here
 };
 
 // Nonmember function operators go here
+Vector operator*(Vector& rhs, const value val);
+Vector operator+=(Vector& rhs, const value val);
+Vector operator*=(Vector& rhs, const value val);
+std::ostream& operator<<(std::ostream& os, const Vector& rhs);
